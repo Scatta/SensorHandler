@@ -1,0 +1,145 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32756 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=11808, tid=11836
+#
+# JRE version:  (8.0_31-b13) (build )
+# Java VM: Java HotSpot(TM) Client VM (25.31-b07 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0023c000):  JavaThread "Unknown thread" [_thread_in_vm, id=11836, stack(0x007f0000,0x00840000)]
+
+Stack: [0x007f0000,0x00840000],  sp=0x0083f288,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x197b8b]
+V  [jvm.dll+0x190a28]
+V  [jvm.dll+0x81959]
+V  [jvm.dll+0x81bcf]
+V  [jvm.dll+0x81f2a]
+V  [jvm.dll+0x98774]
+V  [jvm.dll+0x16893]
+V  [jvm.dll+0x175ac]
+V  [jvm.dll+0x17d75]
+V  [jvm.dll+0x1ea02c]
+V  [jvm.dll+0x145c2c]
+V  [jvm.dll+0x169cb8]
+V  [jvm.dll+0xdb171]
+C  [java.exe+0x13d7]
+C  [java.exe+0x1eaa]
+C  [java.exe+0xab91]
+C  [java.exe+0xac1b]
+C  [kernel32.dll+0x1338a]
+C  [ntdll.dll+0x39f72]
+C  [ntdll.dll+0x39f45]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0023c000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=11836, stack(0x007f0000,0x00840000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00850000 - 0x00880000 	C:\Program Files (x86)\Java\jre1.8.0_31\bin\java.exe
+0x77dc0000 - 0x77f40000 	C:\Windows\SysWOW64\ntdll.dll
+0x75b00000 - 0x75c10000 	C:\Windows\syswow64\kernel32.dll
+0x763b0000 - 0x763f7000 	C:\Windows\syswow64\KERNELBASE.dll
+0x77650000 - 0x776f0000 	C:\Windows\syswow64\ADVAPI32.dll
+0x77580000 - 0x7762c000 	C:\Windows\syswow64\msvcrt.dll
+0x779a0000 - 0x779b9000 	C:\Windows\SysWOW64\sechost.dll
+0x778b0000 - 0x779a0000 	C:\Windows\syswow64\RPCRT4.dll
+0x75750000 - 0x757b0000 	C:\Windows\syswow64\SspiCli.dll
+0x75740000 - 0x7574c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x764f0000 - 0x765f0000 	C:\Windows\syswow64\USER32.dll
+0x765f0000 - 0x76680000 	C:\Windows\syswow64\GDI32.dll
+0x763a0000 - 0x763aa000 	C:\Windows\syswow64\LPK.dll
+0x75c20000 - 0x75cbd000 	C:\Windows\syswow64\USP10.dll
+0x717c0000 - 0x7195e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\COMCTL32.dll
+0x76830000 - 0x76887000 	C:\Windows\syswow64\SHLWAPI.dll
+0x76300000 - 0x76360000 	C:\Windows\system32\IMM32.DLL
+0x75f40000 - 0x7600c000 	C:\Windows\syswow64\MSCTF.dll
+0x748e0000 - 0x7491a000 	C:\Windows\SysWOW64\nvinit.dll
+0x0f000000 - 0x0f006000 	C:\Program Files (x86)\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x71d60000 - 0x71dab000 	C:\Program Files (x86)\NVIDIA Corporation\CoProcManager\nvd3d9wrap.dll
+0x76010000 - 0x761ad000 	C:\Windows\syswow64\SETUPAPI.dll
+0x77750000 - 0x77777000 	C:\Windows\syswow64\CFGMGR32.dll
+0x774f0000 - 0x7757f000 	C:\Windows\syswow64\OLEAUT32.dll
+0x766d0000 - 0x7682c000 	C:\Windows\syswow64\ole32.dll
+0x766b0000 - 0x766c2000 	C:\Windows\syswow64\DEVOBJ.dll
+0x71d20000 - 0x71d53000 	C:\Program Files (x86)\NVIDIA Corporation\CoProcManager\nvdxgiwrap.dll
+0x646f0000 - 0x647af000 	C:\Program Files (x86)\Java\jre1.8.0_31\bin\msvcr100.dll
+0x60060000 - 0x60404000 	C:\Program Files (x86)\Java\jre1.8.0_31\bin\client\jvm.dll
+0x747a0000 - 0x747a7000 	C:\Windows\system32\WSOCK32.dll
+0x76360000 - 0x76395000 	C:\Windows\syswow64\WS2_32.dll
+0x77630000 - 0x77636000 	C:\Windows\syswow64\NSI.dll
+0x71ec0000 - 0x71ef2000 	C:\Windows\system32\WINMM.dll
+0x76410000 - 0x76415000 	C:\Windows\syswow64\PSAPI.DLL
+0x73cb0000 - 0x73cbc000 	C:\Program Files (x86)\Java\jre1.8.0_31\bin\verify.dll
+0x6cf40000 - 0x6cf61000 	C:\Program Files (x86)\Java\jre1.8.0_31\bin\java.dll
+0x6cf20000 - 0x6cf33000 	C:\Program Files (x86)\Java\jre1.8.0_31\bin\zip.dll
+0x64600000 - 0x646eb000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): .
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=c:\Program Files\Java\jdk1.7.0_40
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Google\Chrome\Application;c:\program files (x86)\nvidia corporation\physx\common;C:\Program Files\Common Files\microsoft shared\windows live;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Windows\system32\windowspowershell\v1.0\;c:\program files\doxygen\bin;c:\program files\java\jdk1.7.0_40\bin;c:\program files (x86)\windows kits\8.1\windows performance toolkit\;c:\program files\microsoft sql server\110\tools\binn\;k:\programfiles\matlab71\bin\win32;K:\Program Files\Matlab\bin\win32;C:\Program Files\Common Files\Microsoft Shared\Windows Live;.;;.;;.;;C:\Python27;C:\Python27\Scripts;C:\Users\Delda\AppData\Roaming\CIRCLE;C:\Program Files\Common Files\Microsoft Shared\Windows Live;.;;.;
+USERNAME=Delda
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 4097088k(190440k free), swap 5143808k(23224k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.31-b07) for windows-x86 JRE (1.8.0_31-b13), built on Dec 17 2014 20:46:12 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Feb 20 19:56:42 2015
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
